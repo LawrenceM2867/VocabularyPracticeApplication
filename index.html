@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lesson 12 - Vocabulary Practice</title>
-  <link rel="stylesheet" href="lesson12.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Vocabulary Practice Application</title>
 </head>
-<body>
-  <div class="wrapper">
-    <h1>Lesson 12: Vocabulary Practice</h1>
+<body class="container">
+    <h1>Vocabulary Power Plus Tests for Book 1</h1>
+    <p>select your vocab lesson(s)</p>
 
-    <section class="vocab-list">
-      <h2>Word List</h2>
-      <ul>
-        <li><strong>Careen</strong> – to swerve or lurch from side to side while in motion</li>
-        <li><strong>Aplomb</strong> – self-confidence</li>
-        <li><strong>Guile</strong> – slyness and cunning in dealing with others</li>
-        <!-- Add more words as needed -->
-      </ul>
-    </section>
+    <div class="lesson_container">
+        <div class="lesson_card_red"> 
+            <input type="checkbox"> 
+            <a href="lessons/lessons.html">
+                <button onclick="index_setLesson('12')">lesson 12</button>
+            </a>
+        </div> 
+    
+        <div class="lesson_card_blue"> 
+            <input type="checkbox"> 
+            <a href="lessons/lessons.html">
+                <button>lesson 00</button>
+            </a>
+        </div>
+    </div>
 
-    <section class="practice-section">
-      <h2>Practice Activities</h2>
-      <button class="practice-btn">Start Multiple Choice Quiz</button>
-      <button class="practice-btn">Start Fill-in-the-Blank</button>
-    </section>
-
-    <footer>
-      <a href="../index.html">← Back to Lesson Selection</a>
-    </footer>
-  </div>
+    <script src="lessons/lessons.js"></script>
 </body>
 </html>
