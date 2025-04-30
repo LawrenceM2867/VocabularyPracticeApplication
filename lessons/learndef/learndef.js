@@ -41,7 +41,7 @@ function setQuestion() { //this sets the data for the questions
     anwser_idx = Math.floor(Math.random() * 4) //select a random button to have the correct definition
 
     buttons.forEach((button, i) => { //iterate through all the buttons
-        document.getElementById("anwsers").children[i].style.background = "#f0f0f0" //resets the color for all the buttons
+        document.getElementById("anwsers").children[i].style.background = "#000000" //resets the color for all the buttons
         if (i == anwser_idx) { //if this button is the one selected to be the correct one
             button.textContent = correct_def //set the text to the correct button
         } else { //if not the correct button
