@@ -4,14 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vocabulary Practice Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #title {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        .button-link {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 24px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .button-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body onload="lessons_onload()">
     <div class="container">
         <h1 id="title">Lesson 00</h1>
 
-        <a href="learnword/learnword.html">word test</a>
-        <a href="learndef/learndef.html">definition test</a>
-        <a href="SpellingTest/WordINputTest.html">Spelling Word Test</a>
+        <a href="learnword/learnword.html" class="button-link">Word Test</a>
+        <a href="learndef/learndef.html" class="button-link">Definition Test</a>
+        <a href="SpellingTest/WordINputTest.html" class="button-link">Spelling Word Test</a>
     </div>
 
     <script src="lessons.js"></script>
