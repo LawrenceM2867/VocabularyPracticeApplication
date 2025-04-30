@@ -1,4 +1,4 @@
-var current_lessons = []
+var current_lesson = "00"
 var current_lesson_word_data = {}
 
 var def_options = []
@@ -14,20 +14,9 @@ var got_wrong = false
 var buttons = document.querySelectorAll("#anwsers button")
 
 function learnword_onload() { //runs when the learning word page opens up
-    current_lessons = JSON.parse(sessionStorage.getItem("current_lessons")) //get the current lessons
-
-    var title = "Word quiz for lesson "
-    for (num in current_lessons) {
-        if (title == "Word quiz for lesson ") {
-            title += current_lessons[num]
-        } else {
-            title += ", " + current_lessons[num]
-        }
-        
-        Object.assign(current_lesson_word_data, lesson_data[current_lessons[num]].words)
-    }
-
-    document.getElementById("title").innerHTML = title //show the lesson names in the title
+    current_lesson = sessionStorage.getItem("current_lesson") //get the current lesson
+    document.getElementById("title").innerHTML = "Word quiz for lesson " + current_lesson //show the lesson name in the title
+    current_lesson_word_data = lesson_data[current_lesson].words //set the current lesson's data
     for (word in current_lesson_word_data) { //iterates through all the words
         def_options.push(current_lesson_word_data[word].def) //adds the definitions to the options
     }
