@@ -3,25 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="WordInput.css">
     <title>Word Input Test</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-        .feedback {
-            margin-top: 20px;
-            font-weight: bold;
-        }
-        .score {
-            margin-top: 10px;
-            font-size: 18px;
-        }
-    </style>
 </head>
-<body>
-    <h2>Word Input Test</h2>
-    <p>Type the word that matches the definition:</p>
+<body onload="onload()">
+    <h1 id="title">Word Input Test</h1>
+    <p id="instruction">Type the word that matches the definition:</p>
 
     <!-- Displaying the current lesson's prompt -->
     <p id="prompt"></p>
@@ -37,6 +24,12 @@
     <!-- Displaying the score -->
     <div class="score" id="score"></div>
 
+    <div class="buttons">
+        <a href="../lessons.html"><button>return</button></a>
+        <button onclick="location.reload()">restart</button>
+    </div>
+
     <script src="Wordinput.js"></script>
+    <script src="../../lessondata.js"></script>
 </body>
 </html>
