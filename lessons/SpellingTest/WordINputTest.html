@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Input Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .feedback {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .score {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Word Input Test</h2>
+    <p>Type the word that matches the definition:</p>
+
+    <!-- Displaying the current lesson's prompt -->
+    <p id="prompt"></p>
+
+    <!-- Form for user input -->
+    <form id="testForm">
+        <input type="text" id="userInput" placeholder="Type your answer here" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="feedback" id="feedback"></div>
+
+    <!-- Displaying the score -->
+    <div class="score" id="score"></div>
+
+    <script src="Wordinput.js"></script>
+</body>
+</html>

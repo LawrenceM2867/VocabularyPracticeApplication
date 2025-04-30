@@ -1,4 +1,4 @@
-var current_lessons = []
+var current_lesson = "00"
 var current_lesson_word_data = {}
 
 var word_options = []
@@ -14,21 +14,9 @@ var got_wrong = false
 var buttons = document.querySelectorAll("#anwsers button")
 
 function learndef_onload() { //runs when the learning definitions page opens up
-    current_lessons = JSON.parse(sessionStorage.getItem("current_lessons")) //get the current lessons
-
-    var title = "Word quiz for lesson "
-    for (num in current_lessons) {
-        if (title == "Word quiz for lesson ") {
-            title += current_lessons[num]
-        } else {
-            title += ", " + current_lessons[num]
-        }
-        
-        Object.assign(current_lesson_word_data, lesson_data[current_lessons[num]].words)
-    }
-
-    document.getElementById("title").innerHTML = title //show the lesson names in the title
-
+    current_lesson = sessionStorage.getItem("current_lesson") //get the current lesson
+    document.getElementById("title").innerHTML = "Definition quiz for lesson " + current_lesson //show the lesson name in the title
+    current_lesson_word_data = lesson_data[current_lesson].words //set the current lesson's data
     word_options = Object.keys(current_lesson_word_data) //set the options for words that can be used
 
     num_of_words = word_options.length //set the number of words to how many options there are
