@@ -1,8 +1,10 @@
 var current_lessons = []
 
 function index_addLesson(lessonNum) { //sets the lesson # to use
-    current_lessons.push(lessonNum) // add a lesson to the current lessons
-    sessionStorage.setItem("current_lessons", JSON.stringify(current_lessons))
+    if (!current_lessons.includes(lessonNum)) {
+        current_lessons.push(lessonNum) // add a lesson to the current lessons
+        sessionStorage.setItem("current_lessons", JSON.stringify(current_lessons))
+    }
 }
 
 function lessons_onload() { //runs when the lessons page opens up
