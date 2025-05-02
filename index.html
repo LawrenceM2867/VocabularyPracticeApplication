@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="index.css" />
-  <title>Vocabulary Practice Application</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Vocabulary Practice Application</title>
 </head>
-<body class="container">
-  <h1>Vocabulary Power Plus Tests for Book 1</h1>
-  <p>Select your vocab lesson(s)</p>
+<body class="container" onload="index_onload()">
+    <h1>Vocabulary Power Plus Tests for Book 1</h1>
+    <p>select your vocab lesson(s)</p>
 
-  <div class="lesson_container">
-    <a href="lessons/lessons.html" onclick="index_setLesson('0')" class="lesson-button-wrapper blue">00</a>
-    <a href="lessons/lessons.html" onclick="index_setLesson('1')" class="lesson-button-wrapper red">01</a>
-    <a href="lessons/lessons.html" onclick="index_setLesson('2')" class="lesson-button-wrapper green">02</a>
-    <a href="lessons/lessons.html" onclick="index_setLesson('3')" class="lesson-button-wrapper blue">03</a>
-    <a href="lessons/lessons.html" onclick="index_setLesson('4')" class="lesson-button-wrapper red">04</a>
-    <a href="lessons/lessons.html" onclick="index_setLesson('5')" class="lesson-button-wrapper green">05</a>
-    <a href="lessons/lessons.html" onclick="index_setLesson('6')" class="lesson-button-wrapper blue">06</a>
-    <a href="lessons/lessons.html" onclick="index_setLesson('7')" class="lesson-button-wrapper red">07</a>
-    <a href="lessons/lessons.html" onclick="index_setLesson('8')" class="lesson-button-wrapper green">08</a>
-  </div>
+    <div class="lesson_container">
+        <div class="lesson-button-wrapper blue">
+            <input type="checkbox" onclick="index_addLesson('1')">
+            <a href="lessons/lessons.html" onclick="index_setLesson('1', this)" class="lesson-button-wrapper blue">1</a>
+        </div>
+        <div class="lesson-button-wrapper red">
+            <input type="checkbox" onclick="index_addLesson('2')">
+            <a href="lessons/lessons.html" onclick="index_setLesson('2', this)" class="lesson-button-wrapper red">2</a>
+        </div>
+        <div class="lesson-button-wrapper green">
+            <input type="checkbox" onclick="index_addLesson('12')">
+            <a href="lessons/lessons.html" onclick="index_setLesson('12', this)" class="lesson-button-wrapper green">12</a>
+        </div>
+    </div>
+    <dl></dl>
+    <a href="lessons/lessons.html" id="gotoall"><button class="allbutton">go to selected lessons</button></a>
 
-  <script src="lessons/lessons.js"></script>
+    <script src="lessons/lessons.js"></script>
+    <script src="lessondata.js"></script>
 </body>
 </html>
