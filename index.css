@@ -6,115 +6,75 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 30px 20px;
+    padding: 20px 15px;
     text-align: center;
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    margin-bottom: 8px;
     color: #2c3e50;
 }
 
-h2 {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    color: #34495e;
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
 }
 
 .lesson_container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, auto); /* Shrinks column width to content */
+    column-gap: 15px; /* Tighter horizontal spacing */
+    row-gap: 20px; /* Adjust vertical spacing if needed */
     justify-content: center;
 }
 
-.lesson_card_blue,
-.lesson_card_red {
+
+.lesson-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 45px;
     border-radius: 12px;
-    padding: 10px 30px;
-    width: 1000px;
-    text-align: left;
+    cursor: pointer;
     transition: transform 0.2s, background-color 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    color: #333;
 }
 
-.lesson_card_blue {
+.lesson-button-wrapper.blue {
     background-color: #dff0fc;
     border: 2px solid #3498db;
 }
 
-.lesson_card_red {
-    background-color: #d2461b30;
-    border: 2px solid rgb(255, 55, 0);
+.lesson-button-wrapper.red {
+    background-color: #fce4e1;
+    border: 2px solid #e74c3c;
 }
 
-.lesson_card_blue:hover {
-    background-color: #cce7f9;
-    transform: translateY(-3px);
+.lesson-button-wrapper.green {
+    background-color: #fce4e1;
+    border: 2px solid #419c3a;
 }
 
-.lesson_card_red:hover {
-    background-color: #d2461b3f;
-    transform: translateY(-3px);
+.lesson-button-wrapper.blue:hover {
+    background-color: #5a99c3;
+    transform: translateY(-2px);
 }
 
-
-.custom-checkbox {
-    position: relative;
-    padding-left: 50px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    color: #2c3e50;
-    display: inline-block;
-    user-select: none;
+.lesson-button-wrapper.red:hover {
+    background-color: #bd5f56;
+    transform: translateY(-2px);
 }
 
-.custom-checkbox input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-.checkmark {
-    position: absolute;
-    top: 2px;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    background-color: #eee;
-    border: 2px solid #3498db;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.custom-checkbox:hover .checkmark {
-    background-color: #d6eaf8;
-}
-
-.custom-checkbox input:checked ~ .checkmark {
-    background-color: #3498db;
-}
-
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-.custom-checkbox input:checked ~ .checkmark:after {
-    display: block;
-}
-
-.custom-checkbox .checkmark:after {
-    left: 6px;
-    top: 2px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
+.lesson-button-wrapper.green:hover {
+    background-color: rgb(179, 214, 170);
+    transform: translateY(-2px);
 }
