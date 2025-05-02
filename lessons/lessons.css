@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    justify-content: center;  /* Centers the boxes horizontally */
+    gap: 20px;  /* Adds space between the boxes */
+    flex-wrap: wrap;  /* Allows boxes to wrap to the next line on smaller screens */
+}
+
+.link-box {
+    background-color: #3f3f3f;
+    color: white;
+    border: none;
+    padding: 10px 20px;  /* Smaller padding to make the box fit the text */
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    
+    /* Center the content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Prevent the box from expanding too much */
+    white-space: nowrap;  /* Prevents text from wrapping if it's too long */
+}
+
+.link-box a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.link-box:hover {
+    background-color: #555; /* Slightly lighter background on hover */
+    transform: scale(1.05);  /* Slightly scale the box on hover */
+}
+
+#title {
+    text-align: center; /* Center the text horizontally */
+    margin: 0; /* Remove default margin */
+}
