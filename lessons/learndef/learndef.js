@@ -17,9 +17,9 @@ function learndef_onload() { //runs when the learning definitions page opens up
     current_lessons = JSON.parse(sessionStorage.getItem("current_lessons")) //get the current lessons
     if (current_lessons.length == 0) {window.location.href = "../../index.html";}
 
-    var title = "Word quiz for lesson "
+    var title = "Definition quiz for lesson "
     for (num in current_lessons) {
-        if (title == "Word quiz for lesson ") {
+        if (title == "Definition quiz for lesson ") {
             title += current_lessons[num]
         } else {
             title += ", " + current_lessons[num]
