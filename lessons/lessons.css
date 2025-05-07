@@ -20,6 +20,7 @@
     align-items: center;
     white-space: nowrap;
     margin: 20px;
+    text-decoration: none;
 }
 
 .link-box a {
@@ -93,6 +94,8 @@ button {
     margin: 20px;
     width: 270px;
     height: 55px;
+    position: absolute;
+    bottom: 10px;
 }
 
 button:hover {
