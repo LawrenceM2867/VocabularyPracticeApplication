@@ -15,6 +15,7 @@ var buttons = document.querySelectorAll("#anwsers button")
 
 function learnword_onload() { //runs when the learning word page opens up
     current_lessons = JSON.parse(sessionStorage.getItem("current_lessons")) //get the current lessons
+    if (current_lessons.length == 0) {window.location.href = "../../index.html";}
 
     var title = "Word quiz for lesson "
     for (num in current_lessons) {

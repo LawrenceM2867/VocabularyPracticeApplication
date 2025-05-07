@@ -16,6 +16,7 @@ var buttons = document.querySelectorAll("#anwsers button")
 
 function onload() {
     current_lessons = JSON.parse(sessionStorage.getItem("current_lessons")) //get the current lessons
+    if (current_lessons.length == 0) {window.location.href = "../../index.html";}
 
     var title = "Antonym quiz for lesson "
     for (num in current_lessons) {

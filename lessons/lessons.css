@@ -1,28 +1,25 @@
 .container {
-    display: flex;
-    justify-content: center;  /* Centers the boxes horizontally */
-    gap: 20px;  /* Adds space between the boxes */
-    flex-wrap: wrap;  /* Allows boxes to wrap to the next line on smaller screens */
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .link-box {
     background-color: #3f3f3f;
     color: white;
     border: none;
-    width: 238px;
-    padding: 20px;  /* Smaller padding to make the box fit the text */
+    width: 230px;
+    height: 20px;
+    padding: 20px;
     font-size: 1.1em;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    
-    /* Center the content */
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    /* Prevent the box from expanding too much */
-    white-space: nowrap;  /* Prevents text from wrapping if it's too long */
+    white-space: nowrap;
+    margin: 20px;
 }
 
 .link-box a {
@@ -32,26 +29,25 @@
 }
 
 .link-box:hover {
-    background-color: #555; /* Slightly lighter background on hover */
-    transform: scale(1.05);  /* Slightly scale the box on hover */
+    background-color: #555;
+    transform: scale(1.05);
 }
 
 #title {
-    text-align: center; /* Center the text horizontally */
-    margin: 0; /* Remove default margin */
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0px;
 }
 
 body {
     font-family: Arial, sans-serif;
 }
 
-/* Added CSS for Word Boxes */
 #word-container {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     margin-top: 20px;
-    justify-content: center; /* Centers the word boxes horizontally */
 }
 
 .word-box {
@@ -61,13 +57,13 @@ body {
     border-radius: 5px;
     width: 250px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease; /* Adding smooth transition effect */
+    transition: transform 0.2s ease;
 }
 
 .word-box h3 {
     font-size: 18px;
     margin: 0 0 10px;
-    color: #333; /* Change word name color */
+    color: #333;
 }
 
 .word-box p {
@@ -77,13 +73,12 @@ body {
 }
 
 .word-box p:first-child {
-    font-weight: bold; /* Make the part of speech bold */
+    font-weight: bold;
 }
 
-/* Optional: Add hover effect for word boxes */
 .word-box:hover {
-    transform: scale(1.05); /* Slightly scale the box on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 button {
@@ -95,6 +90,9 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 20px;
+    width: 270px;
+    height: 55px;
 }
 
 button:hover {
@@ -104,4 +102,12 @@ button:hover {
 
 button:focus {
     outline: none;
+}
+
+.maincontainer {
+    display: flex;
+}
+
+.container h2 {
+    padding-left: 20px;
 }

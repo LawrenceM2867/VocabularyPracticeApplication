@@ -1,39 +1,37 @@
 var current_lessons = []
 
-var wordContainer = document.getElementById("word-container");
+var wordcontainer = document.getElementById("word-container");
 
-function index_onload() {
-    sessionStorage.setItem("current_lessons", JSON.stringify([]))
+function index_onload() { //when the main page loads
+    sessionStorage.setItem("current_lessons", JSON.stringify([])) //reset everything
     document.getElementById("gotoall").style.display = "none"
 }
 
 function index_addLesson(lessonNum, box) { //sets the lesson # to use
-    if (!current_lessons.includes(lessonNum)) {
+    if (!current_lessons.includes(lessonNum)) { //if the list does not have the number
         current_lessons.push(lessonNum) // add a lesson to the current lessons
     } else {
-        current_lessons.splice(current_lessons.indexOf(lessonNum), 1)
+        current_lessons.splice(current_lessons.indexOf(lessonNum), 1) //remove the lessson if not selected
     }
 
-    sessionStorage.setItem("current_lessons", JSON.stringify(current_lessons))
+    sessionStorage.setItem("current_lessons", JSON.stringify(current_lessons)) //update the storage
 
-    if (current_lessons.length != 0) {
+    if (current_lessons.length != 0) { //show the button if there's stuff in the list, hide if not
         document.getElementById("gotoall").style.display = "block"
     } else {
         document.getElementById("gotoall").style.display = "none"
     }
 }
 
-function index_setLesson(lessonNum) {
+function index_setLesson(lessonNum) { //sends you to the lesson that you select
     sessionStorage.setItem("current_lessons", JSON.stringify([lessonNum]))
 }
 
-
-function lessons_onload() { 
-    // Get current lessons from sessionStorage
-    current_lessons = JSON.parse(sessionStorage.getItem("current_lessons"));
+function lessons_onload() {  //load for the lesson page
+    current_lessons = JSON.parse(sessionStorage.getItem("current_lessons")); //gets the lesson numbers, if empty it goes to the main page
+    if (current_lessons.length == 0) {window.location.href = "../index.html";}
     
-    // Set the title dynamically based on the current lessons
-    var title = "Lesson ";
+    var title = "Lesson "; //set the title to the lesson
     for (num in current_lessons) {
         if (title == "Lesson ") {
             title += current_lessons[num];
@@ -41,37 +39,28 @@ function lessons_onload() {
             title += ", " + current_lessons[num];
         }
     }
-    document.getElementById("title").innerHTML = title; // Set the title to the lesson
+    document.getElementById("title").innerHTML = title; //update the title
 
-    // Get the container element where we will display the word boxes
-    wordContainer.innerHTML = ""; // Clear the container first in case there's any leftover content
-
-    for (lesson in current_lessons) {addKards(current_lessons[lesson]);}
+    wordcontainer.innerHTML = ""; //empty the container with all the words in it
+    for (lesson in current_lessons) {addKards(current_lessons[lesson]);} //add words to the container for each lesson
 }
 
-function addKards(lessonId) {
-    console.log(lessonId)
-    var lesson = lesson_data[lessonId]; // Retrieve the lesson object based on lessonId
-    console.log(lesson)
-    // Loop through each word in the lesson
-    for (var word in lesson.words) {
-        var wordDetails = lesson.words[word]; // Get details for each word
+function addKards(lessonID) {
+    var lesson = lesson_data[lessonID]; //gets the lesson data
+    for (var word in lesson.words) { //iterates through every word
+        var data = lesson.words[word]; //gets the word
 
-        // Create a div for the word box
-        var wordBox = document.createElement("div");
-        wordBox.classList.add("word-box"); // Add a class for styling
+        var wordbox = document.createElement("div"); //creates a div that will hold all the word info
+        wordbox.classList.add("word-box");
 
-        // Create and append the word title (e.g., "deluge")
-        var wordTitle = document.createElement("h3");
-        wordTitle.textContent = word; // The word name
-        wordBox.appendChild(wordTitle);
+        var wordtitle = document.createElement("h3"); //make the title for the word itself
+        wordtitle.textContent = word;
+        wordbox.appendChild(wordtitle);
 
-        // Create and append the part of speech (e.g., "n" for noun)
-        var partOfSpeech = document.createElement("p");
-        partOfSpeech.textContent = "(" + wordDetails.ps + ") " + wordDetails.def; // e.g., "n" or "adj"
-        wordBox.appendChild(partOfSpeech);
+        var ps = document.createElement("p"); //make the text for the defenition and the part of speech
+        ps.textContent = "(" + data.ps + ") " + data.def;
+        wordbox.appendChild(ps);
 
-        // Append the word box to the word container
-        wordContainer.appendChild(wordBox);
+        wordcontainer.appendChild(wordbox); //add the div to the container
     }
 }
