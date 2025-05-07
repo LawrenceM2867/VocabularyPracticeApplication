@@ -8,7 +8,7 @@ var lesson_data = { //all of the data for each of the lessons
     "12" : { //lesson #
         "words" : { //all of the words
             "deluge" : { //the word
-                "ps" : "Noun", //part of speech
+                "ps" : "noun", //part of speech
                 "def" : "a flood; an overwhelming rush", //defenition
                 "ex" : "The new amusement park experienced a ____ of visitors on opening day.", //example sentence, _ x4 is where the word goes
                 "ant" : ["drought", "dearth"], //antonyms
@@ -16,7 +16,7 @@ var lesson_data = { //all of the data for each of the lessons
             },
 
             "catholic" : {
-                "ps" : "Adjective",
+                "ps" : "adjective",
                 "def" : "universal; wide-ranging",
                 "ex" : "His ____ interests made him quite knowledgeable in may subjects",
                 "ant" : ["provincial", "limited", "parochial"],
@@ -24,7 +24,7 @@ var lesson_data = { //all of the data for each of the lessons
             },
 
             "eerie" : {
-                "ps" : "Adjective",
+                "ps" : "adjective",
                 "def" : "weird; mysterious; strange and frightening",
                 "ex" : "No one accepted the dare to stay in the ____ old mansion for one night.",
                 "ant" : ["common", "ordinary"],
@@ -32,7 +32,7 @@ var lesson_data = { //all of the data for each of the lessons
             },
 
             "martial" : {
-                "ps" : "Adjective",
+                "ps" : "adjective",
                 "def" : "warlike; relating to the military",
                 "ex" : "A state of ____ law was declared in the small country in the weeks following the overthrow of the government.",
                 "ant" : [],
@@ -40,7 +40,7 @@ var lesson_data = { //all of the data for each of the lessons
             },
 
             "anthropomorphic" : {
-                "ps" : "Adjective",
+                "ps" : "adjective",
                 "def" : "attributing human characteristics or qualities to objects, animals, or gods",
                 "ex" : "____ stories might feature pigs and rabbits walking upright wearing clothes, and speaking to each other in human languages.",
                 "ant" : [],
@@ -48,7 +48,7 @@ var lesson_data = { //all of the data for each of the lessons
             },
 
             "beneficiary" : {
-                "ps" : "Noun",
+                "ps" : "noun",
                 "def" : "one who receives benefits",
                 "ex" : "John was the sole ____ of his Uncle Martin’s vast estate.",
                 "ant" : [],
@@ -56,7 +56,7 @@ var lesson_data = { //all of the data for each of the lessons
             },
 
             "careen" : {
-                "ps" : "Verb",
+                "ps" : "verb",
                 "def" : "to swerve or lurch from side to side while in motion",
                 "ex" : "The torrential winds caused the ship to ____ violently.",
                 "ant" : [],
@@ -64,7 +64,7 @@ var lesson_data = { //all of the data for each of the lessons
             },
 
             "aplomb" : {
-                "ps" : "Noun",
+                "ps" : "noun",
                 "def" : "self-confidence",
                 "ex" : "The ____ of the young dancer astonished the veterans of the troupe.",
                 "ant" : ["awkwardness"],
@@ -72,7 +72,7 @@ var lesson_data = { //all of the data for each of the lessons
             },
 
             "guile" : {
-                "ps" : "Noun",
+                "ps" : "noun",
                 "def" : "slyness and cunning in dealing with others",
                 "ex" : "Brad’s ____ contributed to his wealth, but it also created enemies.",
                 "ant" : ["honesty"],
@@ -80,7 +80,7 @@ var lesson_data = { //all of the data for each of the lessons
             },
 
             "modicum" : {
-                "ps" : "Noun",
+                "ps" : "noun",
                 "def" : "a small amount",
                 "ex" : "A sudden shower gave us a ____ of relief from the heat and humidity.",
                 "ant" : ["abundance"],
@@ -88,7 +88,7 @@ var lesson_data = { //all of the data for each of the lessons
             },
 
             "rancid" : {
-                "ps" : "Adjective",
+                "ps" : "adjective",
                 "def" : "having a bad taste ",
                 "ex" : "The bitter fight over child custody left a ____ taste in both lawyers' mouths.",
                 "ant" : ["fresh"],
@@ -96,7 +96,7 @@ var lesson_data = { //all of the data for each of the lessons
             },
 
             "havoc" : {
-                "ps" : "Noun",
+                "ps" : "noun",
                 "def" : "great destruction; chaos",
                 "ex" : "The commandos wreaked ____ throughout the area when they infiltrated the secret base.",
                 "ant" : ["order"],
@@ -104,7 +104,7 @@ var lesson_data = { //all of the data for each of the lessons
             },
 
             "pall" : {
-                "ps" : "Noun",
+                "ps" : "noun",
                 "def" : "something that covers or conceals",
                 "ex" : "A ____ of gloom descended over the crowd.",
                 "ant" : [],
@@ -112,7 +112,7 @@ var lesson_data = { //all of the data for each of the lessons
             },
 
             "languish" : {
-                "ps" : "Verb",
+                "ps" : "verb",
                 "def" : "to become weak or feeble; to lose strength",
                 "ex" : "I ____ed at the thought of all the work that still needed to be done",
                 "ant" : ["thrive"],
@@ -120,7 +120,7 @@ var lesson_data = { //all of the data for each of the lessons
             },
 
             "fester" : {
-                "ps" : "Verb",
+                "ps" : "verb",
                 "def" : "to grow embittered over time; to rot",
                 "ex" : "If allowed to ____, dislike can turn into bitter hatred.",
                 "ant" : [],

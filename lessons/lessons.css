@@ -9,7 +9,8 @@
     background-color: #3f3f3f;
     color: white;
     border: none;
-    padding: 10px 20px;  /* Smaller padding to make the box fit the text */
+    width: 238px;
+    padding: 20px;  /* Smaller padding to make the box fit the text */
     font-size: 1.1em;
     border-radius: 5px;
     cursor: pointer;
