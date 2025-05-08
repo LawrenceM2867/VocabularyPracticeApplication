@@ -17,15 +17,15 @@ function learndef_onload() { //runs when the learning definitions page opens up
     current_lessons = JSON.parse(sessionStorage.getItem("current_lessons")) //get the current lessons
     if (current_lessons.length == 0) {window.location.href = "../../index.html";}
 
-    var title = "Definition quiz for lesson "
-    for (num in current_lessons) {
-        if (title == "Definition quiz for lesson ") {
+    var title = "Definition quiz for lesson " //title placeholder
+    for (num in current_lessons) { //iterates through all of the lessons
+        if (title == "Definition quiz for lesson ") { //if it's the first lesson just add the number by itself
             title += current_lessons[num]
-        } else {
+        } else { //if not, add a comma before
             title += ", " + current_lessons[num]
         }
         
-        Object.assign(current_lesson_word_data, lesson_data[current_lessons[num]].words)
+        Object.assign(current_lesson_word_data, lesson_data[current_lessons[num]].words) //add the words from the lesson onto the local word data bank
     }
 
     document.getElementById("title").innerHTML = title //show the lesson names in the title

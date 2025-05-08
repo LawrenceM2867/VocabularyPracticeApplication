@@ -18,27 +18,27 @@ function onload() {
     current_lessons = JSON.parse(sessionStorage.getItem("current_lessons")) //get the current lessons
     if (current_lessons.length == 0) {window.location.href = "../../index.html";}
 
-    var title = "Synonym quiz for lesson "
-    for (num in current_lessons) {
-        if (title == "Synonym quiz for lesson ") {
+    var title = "Synonym quiz for lesson " //title placeholder
+    for (num in current_lessons) { //iterates through all of the lessons
+        if (title == "Synonym quiz for lesson ") { //if it's the first lesson just add the number by itself
             title += current_lessons[num]
-        } else {
+        } else { //if not, add a comma before
             title += ", " + current_lessons[num]
         }
         
-        Object.assign(current_lesson_word_data, lesson_data[current_lessons[num]].words)
+        Object.assign(current_lesson_word_data, lesson_data[current_lessons[num]].words) //add the words from the lesson onto the local word data bank
     }
 
     document.getElementById("title").innerHTML = title //show the lesson names in the title
 
     for (word in current_lesson_word_data) { //iterates through all the words
-        for (i in current_lesson_word_data[word].syn) {
-            var data = {
+        for (i in current_lesson_word_data[word].syn) { //iterate through all synonyms in the word
+            var data = { //make an object containing the synonym and the word
                 "syn" : current_lesson_word_data[word].syn[i],
                 "word" : word
             }
 
-            synonym_options.push(data)
+            synonym_options.push(data) //add it to the options to use and the full list of options (latter dosent get synonyms deleted from it while the former does)
             all_options.push(data)
         }
     }
@@ -57,13 +57,13 @@ function setQuestion() { //this sets the data for the questions
     var correct_word = current_synonym.word //store the correct word for the current word
     var other_words = [] //initiate an array for all the other words
     
-    for (data in all_options) {
-        if (all_options[data].word != correct_word && !other_words.includes(all_options[data].word)) {
-            other_words.push(all_options[data].word)
+    for (data in all_options) { //iterate through all the options
+        if (all_options[data].word != correct_word && !other_words.includes(all_options[data].word)) { //if its word is not the correct word and the word isnt already in the the other word options
+            other_words.push(all_options[data].word) //add it to the other word options
         }
     }
 
-    anwser_idx = Math.floor(Math.random() * 4)
+    anwser_idx = Math.floor(Math.random() * 4) //select a random button to have the correct word
 
     buttons.forEach((button, i) => { //iterate through all the buttons
         document.getElementById("anwsers").children[i].style.background = "#000000" //resets the color for all the buttons

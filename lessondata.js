@@ -128,10 +128,6 @@ var lesson_data = { //all of the data for each of the lessons
             }
         },
 
-        "context" : { //for all the putting words into context paragraphs
-
-        },
-
         "rps" : { //roots, prefixes, and suffixes
             "roots" : { //all the roots
                 "patr" : "father",

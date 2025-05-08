@@ -7,7 +7,7 @@ function index_onload() { //when the main page loads
     document.getElementById("gotoall").style.display = "none"
 }
 
-function index_addLesson(lessonNum, box) { //sets the lesson # to use
+function index_addLesson(lessonNum) { //sets the lesson # to use
     if (!current_lessons.includes(lessonNum)) { //if the list does not have the number
         current_lessons.push(lessonNum) // add a lesson to the current lessons
     } else {
