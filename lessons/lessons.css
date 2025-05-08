@@ -95,7 +95,7 @@ button {
     width: 270px;
     height: 55px;
     position: absolute;
-    bottom: 10px;
+    bottom: 5px;
 }
 
 button:hover {
