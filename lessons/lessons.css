@@ -2,6 +2,7 @@
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .link-box {
